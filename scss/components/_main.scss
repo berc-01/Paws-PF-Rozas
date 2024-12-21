@@ -12,8 +12,10 @@
     color: nth($colores, 5);
     @include flex(flex, null, space-around, center);
     .descripcion_paws{
-        width: 700px;
+        width: 750px;
         height: auto;
+        @extend %tarjeta;
+        padding: 30px;
         h1{
             color: nth($colores, 1);
             font-size: 40px;
@@ -23,8 +25,10 @@
         }
     }
     .descripcion_pawhub{
-        width: 700px;
+        width: 750px;
         height: auto;
+        @extend %tarjeta;
+        padding: 30px;
         @include flex(flex, column, space-between, center);
         h2{
             font-size: 40px;
@@ -52,16 +56,11 @@
     .tarjeta_astroneer { grid-area: tarjeta_astroneer; }
 
     div{
-        background-color: nth($colores, 7);
         padding: 20px;
-        border-radius: 20px;
-        &:hover{
-            background-color: nth($colores, 4);
-            transition: 0.5s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
-        }
         width: 100%;
         height: 100%;
         @include flex(flex, column, space-between, center);
+        @extend %tarjeta;
         h2{
             text-align: center;
             font-size: 40px;
@@ -134,12 +133,7 @@
         }
     }
     .tarjeta_producto{
-        background-color: nth($colores, 7);
-        border-radius: 20px;
-        &:hover{
-            background-color: nth($colores, 4);
-            transition: 0.5s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
-        }
+        @extend %tarjeta;
     }
     .trailer{
         @include flex(flex, null, center, center);
@@ -168,14 +162,9 @@
         @include flex(flex, null, space-evenly, center);
         height: $hero;
         div{
-            background-color: nth($colores, 7);
             padding: 30px;
-            border-radius: 25px;
             width: 900px;
-            &:hover{
-                background-color: nth($colores, 4);
-                transition: 0.5s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
-            }
+            @extend %tarjeta;
             h1{
                 color: nth($colores, 1);
                 font-size: 35px;
@@ -190,13 +179,8 @@
         @include flex(flex, null, center, center);
         padding: 20px;
         div{
-            background-color: nth($colores, 7);
             padding: 10px;
-            border-radius: 25px;
-            &:hover{
-                background-color: nth($colores, 4);
-                transition: 0.5s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
-            }
+            @extend %tarjeta;
             h2{
                 font-size: 40px;
                 margin-bottom: 0px;
@@ -249,15 +233,9 @@
         padding: 50px;
         height: auto;
         .instrucciones{
-            background-color: nth($colores, 7);
-            border-radius: 20px;
             padding: 30px;
             width: 800px;
-            &:hover{
-            background-color: nth($colores, 4);
-            color: nth($colores, 6);
-            transition: 0.5s;
-            }
+            @extend %tarjeta;
             @include flex(flex, column, null, center);
             h3{
                 font-size: 35px;
@@ -268,13 +246,8 @@
             @include flex(flex, null, center, center);
             form{
                 color: nth($colores, 5);
-                background-color: nth($colores, 7);
-                border-radius: 20px;
                 padding: 30px;
-                &:hover{
-                background-color: nth($colores, 4);
-                transition: 0.5s;
-                }
+                @extend %tarjeta;
             }
         }
     }
@@ -293,13 +266,81 @@
     background-color: nth($colores, 3);
     background-blend-mode: multiply; /* Referencia: https://youtu.be/zHZRFwWQt2w?t=1019 */
     color: nth($colores, 5);
-    @include flex(flex, column, center, center);
-    h1{
-        color: nth($colores, 1);
-        font-size: 40px;
+    @include flex(flex, null, center, center);
+    div{
+        @extend %tarjeta;
+        padding: 30px;
+        @include flex(flex, column, center, center);
+        h1{
+            color: nth($colores, 1);
+            font-size: 40px;
+        }
+        p{
+            font-size: 30px;
+        }
     }
-    p{
-        font-size: 30px;
+}
+
+.equipo{
+    height: auto;
+    padding: 30px;
+    background-image: url(../img/background_equipo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: nth($colores, 3);
+    background-blend-mode: multiply; /* Referencia: https://youtu.be/zHZRFwWQt2w?t=1019 */
+    color: nth($colores, 5);
+    padding: 15px;
+    @include flex(flex, column, center, center);
+    padding: 20px;
+    .titulo_equipo{
+        padding: 10px;
+        @extend %tarjeta;
+        h2{
+            font-size: 40px;
+            margin-bottom: 0px;
+            text-align: center;
+            color: nth($colores, 1);
+            padding: 5px;
+        }
+    }
+    .grilla_equipo{
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: auto; 
+        gap: 15px 15px; 
+        grid-template-areas: 
+            "bio_gabe bio_gabe foto_gabe"
+            "foto_alec bio_alec bio_alec"
+            "bio_nikita bio_nikita foto_nikita";
+        .bio_gabe { grid-area: bio_gabe; }
+        .foto_gabe { grid-area: foto_gabe; }
+        .foto_alec { grid-area: foto_alec; }
+        .bio_alec { grid-area: bio_alec; }
+        .bio_nikita { grid-area: bio_nikita; }
+        .foto_nikita { grid-area: foto_nikita; }
+        .bio{
+            width: 100%;
+            height: 100%;
+            @include flex(flex, column, center, center);
+            div{
+                @extend %tarjeta;
+                padding: 50px;
+            }
+        }
+        .img_equipo{
+            width: 100%;
+            height: 100%;
+            @include flex(flex, column, center, center);
+            img{
+                border: 2px solid nth($colores,1);
+                width: 420px;
+                height: auto;
+            }
+        }
     }
 }
 
@@ -315,20 +356,14 @@
     background-blend-mode: multiply; /* Referencia: https://youtu.be/zHZRFwWQt2w?t=1019 */
     color: nth($colores, 5);
     @include flex(flex, column, space-around, center);
-    // flex-wrap: wrap;
     .consulta_formulario{
         padding: 50px;
         @include flex(flex, null, space-around, center);
         width: 100%;
         .consulta{
             width: 650px;
-            background-color: nth($colores, 7);
-            border-radius: 20px;
             padding: 30px;
-            &:hover{
-                background-color: nth($colores, 4);
-                transition: 0.5s;
-            }
+            @extend %tarjeta;
             h1{
                 color: nth($colores, 1);
                 font-size: 30px;
@@ -340,13 +375,8 @@
         .formulario_contacto{
             width: 500px;
             form{
-                background-color: nth($colores, 7);
-                border-radius: 20px;
                 padding: 30px;
-                &:hover{
-                background-color: nth($colores, 4);
-                transition: 0.5s;
-                }
+                @extend %tarjeta;
             }
         }
     }
@@ -360,13 +390,8 @@
         h2{
             width: 600px;
             font-size: 30px;
-            background-color: nth($colores, 7);
-            border-radius: 20px;
             padding: 30px;
-            &:hover{
-                background-color: nth($colores, 4);
-                transition: 0.5s;
-            }
+            @extend %tarjeta;
         }
     }
 }

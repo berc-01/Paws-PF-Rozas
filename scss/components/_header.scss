@@ -42,6 +42,12 @@ header{
         }
         .dropdown{
             display: none;
+            button{
+                background-color: nth($colores, 2);
+                &:hover{
+                    background-color: nth($colores, 2);
+                }
+            }
         }
     }
 }

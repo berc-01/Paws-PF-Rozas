@@ -12,6 +12,15 @@
   background-color: rgb(228, 92, 92);
 }
 
+.contacto .maps h2, .contacto .consulta_formulario .formulario_contacto form, .contacto .consulta_formulario .consulta, .equipo .grilla_equipo .bio div, .equipo .titulo_equipo, .about div, .pawhub .registrarse .formulario form, .pawhub .registrarse .instrucciones, .pawhub .titulo_funciones div, .pawhub .pawhub_invitacion div, .productos_videojuegos .tarjeta_producto, .videojuegos div, .hero .descripcion_pawhub, .hero .descripcion_paws {
+  background-color: rgba(75, 75, 75, 0.25);
+  border-radius: 20px;
+}
+.contacto .maps h2:hover, .contacto .consulta_formulario .formulario_contacto form:hover, .contacto .consulta_formulario .consulta:hover, .equipo .grilla_equipo .bio div:hover, .equipo .titulo_equipo:hover, .about div:hover, .pawhub .registrarse .formulario form:hover, .pawhub .registrarse .instrucciones:hover, .pawhub .titulo_funciones div:hover, .pawhub .pawhub_invitacion div:hover, .productos_videojuegos .tarjeta_producto:hover, .videojuegos div:hover, .hero .descripcion_pawhub:hover, .hero .descripcion_paws:hover {
+  background-color: hsla(0, 0%, 50%, 0.35);
+  transition: 0.5s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -67,6 +76,12 @@ header nav .menu li a:hover {
 header nav .dropdown {
   display: none;
 }
+header nav .dropdown button {
+  background-color: rgb(55, 143, 224);
+}
+header nav .dropdown button:hover {
+  background-color: rgb(55, 143, 224);
+}
 
 .hero {
   height: calc(100vh - 95px);
@@ -83,8 +98,9 @@ header nav .dropdown {
   align-items: center;
 }
 .hero .descripcion_paws {
-  width: 700px;
+  width: 750px;
   height: auto;
+  padding: 30px;
 }
 .hero .descripcion_paws h1 {
   color: rgb(228, 92, 92);
@@ -94,8 +110,9 @@ header nav .dropdown {
   font-size: 40px;
 }
 .hero .descripcion_pawhub {
-  width: 700px;
+  width: 750px;
   height: auto;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -135,19 +152,13 @@ header nav .dropdown {
   grid-area: tarjeta_astroneer;
 }
 .videojuegos div {
-  background-color: rgba(75, 75, 75, 0.25);
   padding: 20px;
-  border-radius: 20px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
-.videojuegos div:hover {
-  background-color: hsla(0, 0%, 50%, 0.35);
-  transition: 0.5s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
 }
 .videojuegos div h2 {
   text-align: center;
@@ -241,14 +252,6 @@ header nav .dropdown {
   justify-content: center;
   align-items: center;
 }
-.productos_videojuegos .tarjeta_producto {
-  background-color: rgba(75, 75, 75, 0.25);
-  border-radius: 20px;
-}
-.productos_videojuegos .tarjeta_producto:hover {
-  background-color: hsla(0, 0%, 50%, 0.35);
-  transition: 0.5s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
-}
 .productos_videojuegos .trailer {
   display: flex;
   justify-content: center;
@@ -277,14 +280,8 @@ header nav .dropdown {
   height: calc(100vh - 95px);
 }
 .pawhub .pawhub_invitacion div {
-  background-color: rgba(75, 75, 75, 0.25);
   padding: 30px;
-  border-radius: 25px;
   width: 900px;
-}
-.pawhub .pawhub_invitacion div:hover {
-  background-color: hsla(0, 0%, 50%, 0.35);
-  transition: 0.5s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
 }
 .pawhub .pawhub_invitacion div h1 {
   color: rgb(228, 92, 92);
@@ -301,13 +298,7 @@ header nav .dropdown {
   padding: 20px;
 }
 .pawhub .titulo_funciones div {
-  background-color: rgba(75, 75, 75, 0.25);
   padding: 10px;
-  border-radius: 25px;
-}
-.pawhub .titulo_funciones div:hover {
-  background-color: hsla(0, 0%, 50%, 0.35);
-  transition: 0.5s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
 }
 .pawhub .titulo_funciones div h2 {
   font-size: 40px;
@@ -375,18 +366,11 @@ header nav .dropdown {
   height: auto;
 }
 .pawhub .registrarse .instrucciones {
-  background-color: rgba(75, 75, 75, 0.25);
-  border-radius: 20px;
   padding: 30px;
   width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.pawhub .registrarse .instrucciones:hover {
-  background-color: hsla(0, 0%, 50%, 0.35);
-  color: black;
-  transition: 0.5s;
 }
 .pawhub .registrarse .instrucciones h3 {
   font-size: 35px;
@@ -399,13 +383,7 @@ header nav .dropdown {
 }
 .pawhub .registrarse .formulario form {
   color: white;
-  background-color: rgba(75, 75, 75, 0.25);
-  border-radius: 20px;
   padding: 30px;
-}
-.pawhub .registrarse .formulario form:hover {
-  background-color: hsla(0, 0%, 50%, 0.35);
-  transition: 0.5s;
 }
 
 .about {
@@ -420,16 +398,101 @@ header nav .dropdown {
   background-blend-mode: multiply; /* Referencia: https://youtu.be/zHZRFwWQt2w?t=1019 */
   color: white;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about div {
+  padding: 30px;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.about h1 {
+.about div h1 {
   color: rgb(228, 92, 92);
   font-size: 40px;
 }
-.about p {
+.about div p {
   font-size: 30px;
+}
+
+.equipo {
+  height: auto;
+  padding: 30px;
+  background-image: url(../img/background_equipo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  background-blend-mode: multiply; /* Referencia: https://youtu.be/zHZRFwWQt2w?t=1019 */
+  color: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.equipo .titulo_equipo {
+  padding: 10px;
+}
+.equipo .titulo_equipo h2 {
+  font-size: 40px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: rgb(228, 92, 92);
+  padding: 5px;
+}
+.equipo .grilla_equipo {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 15px 15px;
+  grid-template-areas: "bio_gabe bio_gabe foto_gabe" "foto_alec bio_alec bio_alec" "bio_nikita bio_nikita foto_nikita";
+}
+.equipo .grilla_equipo .bio_gabe {
+  grid-area: bio_gabe;
+}
+.equipo .grilla_equipo .foto_gabe {
+  grid-area: foto_gabe;
+}
+.equipo .grilla_equipo .foto_alec {
+  grid-area: foto_alec;
+}
+.equipo .grilla_equipo .bio_alec {
+  grid-area: bio_alec;
+}
+.equipo .grilla_equipo .bio_nikita {
+  grid-area: bio_nikita;
+}
+.equipo .grilla_equipo .foto_nikita {
+  grid-area: foto_nikita;
+}
+.equipo .grilla_equipo .bio {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.equipo .grilla_equipo .bio div {
+  padding: 50px;
+}
+.equipo .grilla_equipo .img_equipo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.equipo .grilla_equipo .img_equipo img {
+  border: 2px solid rgb(228, 92, 92);
+  width: 420px;
+  height: auto;
 }
 
 .contacto {
@@ -455,13 +518,7 @@ header nav .dropdown {
 }
 .contacto .consulta_formulario .consulta {
   width: 650px;
-  background-color: rgba(75, 75, 75, 0.25);
-  border-radius: 20px;
   padding: 30px;
-}
-.contacto .consulta_formulario .consulta:hover {
-  background-color: hsla(0, 0%, 50%, 0.35);
-  transition: 0.5s;
 }
 .contacto .consulta_formulario .consulta h1 {
   color: rgb(228, 92, 92);
@@ -474,13 +531,7 @@ header nav .dropdown {
   width: 500px;
 }
 .contacto .consulta_formulario .formulario_contacto form {
-  background-color: rgba(75, 75, 75, 0.25);
-  border-radius: 20px;
   padding: 30px;
-}
-.contacto .consulta_formulario .formulario_contacto form:hover {
-  background-color: hsla(0, 0%, 50%, 0.35);
-  transition: 0.5s;
 }
 .contacto .maps {
   display: flex;
@@ -495,13 +546,7 @@ header nav .dropdown {
 .contacto .maps h2 {
   width: 600px;
   font-size: 30px;
-  background-color: rgba(75, 75, 75, 0.25);
-  border-radius: 20px;
   padding: 30px;
-}
-.contacto .maps h2:hover {
-  background-color: hsla(0, 0%, 50%, 0.35);
-  transition: 0.5s;
 }
 
 footer {
@@ -777,29 +822,55 @@ footer .redes a .bi:hover {
   }
 }
 @media screen and (max-width: 915px) {
-  .about h1 {
+  .about div h1 {
     font-size: 35px;
   }
-  .about p {
+  .about div p {
     font-size: 25px;
   }
-}
-@media screen and (max-width: 685px) {
-  .about h1 {
-    font-size: 30px;
+  .equipo .grilla_equipo .img_equipo img {
+    width: auto;
+    height: 350px;
   }
-  .about p {
+  .equipo .grilla_equipo .bio div h2 {
     font-size: 20px;
   }
 }
-@media screen and (max-width: 500px) {
-  .about h1 {
-    font-size: 25px;
+@media screen and (max-width: 685px) {
+  .about {
+    height: auto;
+  }
+  .about div h1 {
+    font-size: 30px;
+  }
+  .about div p {
+    font-size: 20px;
+  }
+  .equipo .titulo_equipo h2 {
+    font-size: 30px;
+  }
+  .equipo .grilla_equipo .img_equipo img {
+    width: auto;
+    height: 200px;
   }
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 500px) {
   .about {
-    height: 1200px;
+    padding: 40px;
+  }
+  .about div h1 {
+    font-size: 25px;
+  }
+  .equipo .titulo_equipo h2 {
+    font-size: 25px;
+  }
+  .equipo .grilla_equipo {
+    grid-template-columns: 1fr;
+    grid-template-areas: "foto_gabe" "bio_gabe" "foto_alec" "bio_alec" "foto_nikita" "bio_nikita";
+  }
+  .equipo .grilla_equipo .img_equipo img {
+    width: auto;
+    height: 300px;
   }
 }
 @media screen and (max-width: 1360px) {

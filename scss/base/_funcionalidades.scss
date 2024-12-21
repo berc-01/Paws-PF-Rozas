@@ -18,6 +18,15 @@ $colores: rgb(228, 92, 92), rgb(55, 143, 224), hsla(0, 0%, 0%, 0.800), hsla(0, 0
     }
 }
 
+%tarjeta{
+    background-color: nth($colores, 7);
+    border-radius: 20px;
+    &:hover{
+        background-color: nth($colores, 4);
+        transition: 0.5s; /* Referencia: https://www.w3schools.com/howto/howto_css_transition_hover.asp */
+    }
+}
+
 // MIXIN
 @mixin flex ($flex, $direction, $justify, $align){
     display: $flex;

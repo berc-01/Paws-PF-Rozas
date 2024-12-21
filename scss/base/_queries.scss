@@ -349,35 +349,76 @@
 // NOSOTROS.HTML
 
 @media screen and (max-width:915px){
-    .about h1{
+    .about div h1{
         font-size: 35px;
     }
 
-    .about p{
+    .about div p{
         font-size: 25px;
     }
-}
 
-@media screen and (max-width:685px){
-    .about h1{
-        font-size: 30px;
+    .equipo .grilla_equipo .img_equipo img{
+        width: auto;
+        height: 350px;
     }
 
-    .about p{
+    .equipo .grilla_equipo .bio div h2{
         font-size: 20px;
     }
 }
 
-@media screen and (max-width:500px){
-    .about h1{
-        font-size: 25px;
+@media screen and (max-width:685px){
+    .about{
+        height: auto;
+    }
+
+    .about div h1{
+        font-size: 30px;
+    }
+
+    .about div p{
+        font-size: 20px;
+    }
+
+    .equipo .titulo_equipo h2{
+        font-size: 30px;
+    }
+
+    .equipo .grilla_equipo .img_equipo img{
+        width: auto;
+        height: 200px;
     }
 }
 
-@media screen and (max-width:370px){
+@media screen and (max-width:500px){
     .about{
-        height: 1200px;
+        padding: 40px;
     }
+
+    .about div h1{
+        font-size: 25px;
+    }
+
+    .equipo .titulo_equipo h2{
+        font-size: 25px;
+    }
+
+    .equipo .grilla_equipo{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "foto_gabe"
+            "bio_gabe"
+            "foto_alec"
+            "bio_alec"
+            "foto_nikita"
+            "bio_nikita";
+    }
+
+    .equipo .grilla_equipo .img_equipo img{
+        width: auto;
+        height: 300px;
+    }
+
 }
 
 // CONTACTO.HTML
